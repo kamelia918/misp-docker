@@ -82,7 +82,6 @@ services:
       start_interval: 5s
 
   misp-core:
-    image: ${REGISTRY_MIRROR_URL:-}ghcr.io/misp/misp-docker/misp-core:${CORE_RUNNING_TAG:-latest}
     restart: always
     cap_add:
       - AUDIT_WRITE
