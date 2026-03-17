@@ -310,7 +310,6 @@ services:
       - "COMPOSE_PROFILES=${COMPOSE_PROFILES}"
 
   misp-modules:
-    image: ${REGISTRY_MIRROR_URL:-}ghcr.io/misp/misp-docker/misp-modules:${MODULES_RUNNING_TAG:-latest}
     restart: always
     image: ghcr.io/misp/misp-docker/misp-modules:latest
     healthcheck:
@@ -333,7 +332,6 @@ services:
     profiles:
       - misp-guard
     restart: always
-    image: ${REGISTRY_MIRROR_URL:-}ghcr.io/misp/misp-docker/misp-guard:${GUARD_RUNNING_TAG:-latest}
     image: ghcr.io/misp/misp-docker/misp-guard:latest
     depends_on:
       - misp-core
